@@ -1,27 +1,50 @@
-# React + TypeScript + Vite
+# Santo Café
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto realizado com o intuito de concluir um desafio na RocketSeat, no qual eu deveria desenvolver uma página web sozinho de acordo com o design feito no Figma pela equipe de Design.
 
-Currently, two official plugins are available:
+Este projeto faz usos das seguintes bibliotecas/frameworks:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- TypeScript obviamente [@microsoft/TypeScript](https://github.com/microsoft/TypeScript)
+- React [@meta/react](https://https://github.com/facebook/react) 
+- Vite [@vitejs/vite](https://github.com/vitejs/vite)
+- Styled Components [@styled-components/styled-components](https://github.com/styled-components/styled-components)
+- Phosphor React, icones simples e bonitos [@phosphor-icons/react](https://github.com/phosphor-icons/react)
+- ESLint, padronização/estilização/identação [@eslint/eslint](https://github.com/eslint/eslint)
 
-## Expanding the ESLint configuration
+## Configurando Servidor Local
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Caso queira visualizar a interface na sua máquina, é bem fácil, o Vite torna isso bem simples:
 
-- Configure the top-level `parserOptions` property like this:
+- Clone o repositório em sua máquina, abra a pasta do projeto e rode os seguintes comando no seu cmd:
 
 ```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+   npm i
+   npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Caso queira alterar alguma configuração do servidor ou no plugin do Vite, acesse o arquivo `vite.config.ts` na raiz do projeto.
+- Pro padrão o arquivo vem com o seguinte código:
+```js
+   import { defineConfig } from 'vite'
+   import react from '@vitejs/plugin-react'
+
+   // https://vitejs.dev/config/
+   export default defineConfig({
+      plugins: [react()],
+   })
+```
+
+- Por exemplo, para alterar a porta do servidor local, faça as seguinte alterações:
+```js
+   import { defineConfig } from 'vite'
+   import react from '@vitejs/plugin-react'
+
+   // https://vitejs.dev/config/
+   export default defineConfig({
+   plugins: [react()],
+      server: {
+         port: 3333,
+      },
+   })
+```
+
