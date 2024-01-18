@@ -1,6 +1,6 @@
 # Santo Café
 
-Este é um projeto realizado com o intuito de concluir um desafio na RocketSeat, no qual eu deveria desenvolver uma página web sozinho de acordo com o design feito no Figma pela equipe de Design.
+Este é um projeto realizado com o intuito de concluir um desafio na Rocketseat, no qual eu desenvolveria uma página web sozinho de acordo com o design feito no Figma pela equipe de Design da Rocketseat.
 
 Este projeto faz usos das seguintes bibliotecas/frameworks:
 
@@ -15,7 +15,7 @@ Este projeto faz usos das seguintes bibliotecas/frameworks:
 
 Caso queira visualizar a interface na sua máquina, é bem fácil, o Vite torna isso bem simples:
 
-- Clone o repositório em sua máquina, abra a pasta do projeto e rode os seguintes comando no seu cmd:
+- Clone o repositório em sua máquina, abra a pasta do projeto e rode os seguintes comando no seu terminal:
 
 ```js
    npm i
@@ -23,7 +23,7 @@ Caso queira visualizar a interface na sua máquina, é bem fácil, o Vite torna 
 ```
 
 - Caso queira alterar alguma configuração do servidor ou no plugin do Vite, acesse o arquivo `vite.config.ts` na raiz do projeto.
-- Pro padrão o arquivo vem com o seguinte código:
+- Por padrão o arquivo vem com o seguinte código:
 ```js
    import { defineConfig } from 'vite'
    import react from '@vitejs/plugin-react'
